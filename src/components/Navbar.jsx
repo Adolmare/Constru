@@ -37,7 +37,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Mobile menu button */}
+          <div className="md:hidden">
             <button onClick={toggleMenu} className="text-gray-300 hover:text-white p-2">
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -45,8 +45,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      { <div className="md:hidden bg-primary pb-4">
+      {isMenuOpen && (
+        <div className="md:hidden bg-primary pb-4">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {menuItems.map((item) => (
               <Link
