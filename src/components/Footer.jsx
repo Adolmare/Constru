@@ -7,6 +7,7 @@ const Footer = () => {
         <p className="font-bold text-xl text-white mb-2">CONSTRUENERGY INGENIERÍAS S.A.S</p>
         <p className="text-sm mb-4">Soluciones Integrales, Resultados Duraderos.</p>
         
+        -
       </div>
     </footer>
   );
