@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram } from 'react-icons/fa';
+import { FileText } from 'lucide-react'; // Icono estético para el portafolio
 
 const Footer = () => {
   return (
@@ -8,8 +9,20 @@ const Footer = () => {
         <p className="font-bold text-xl text-white mb-2">CONSTRUENERGY INGENIERÍAS S.A.S</p>
         <p className="text-sm mb-6">Soluciones Integrales, Resultados Duraderos.</p>
         
+        {/* Enlace de Descarga de Portafolio */}
+        <div className="mb-8">
+          <a 
+            href="/portafolio-construenergy.pdf" // Asegúrate de que el PDF esté en tu carpeta 'public'
+            download
+            className="inline-flex items-center gap-2 bg-white/5 hover:bg-primary hover:text-white border border-white/10 px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 group"
+          >
+            <FileText size={18} className="text-primary group-hover:text-white transition-colors" />
+            Descargar Portafolio de Servicios
+          </a>
+        </div>
+
         {/* Contenedor de Iconos */}
-        <div className="flex justify-center space-x-6 mb-6">
+        <div className="flex justify-center space-x-6 mb-8">
           <a 
             href="https://facebook.com" 
             target="_blank" 
@@ -26,11 +39,10 @@ const Footer = () => {
           >
             <FaInstagram size={24} />
           </a>
-         
         </div>
 
         <div className="border-t border-gray-800 pt-6">
-          <p className="text-xs">
+          <p className="text-xs text-gray-500">
             &copy; {new Date().getFullYear()} Construenergy Ingenierías. Todos los derechos reservados.
           </p>
         </div>
