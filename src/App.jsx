@@ -7,7 +7,7 @@ import Services from './components/Services';
 import Process from './components/Process';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-
+import ButtonWhatsapp from './components/ButtonWhatsapp';
 function App() {
   return (
     <HelmetProvider>
@@ -26,6 +26,7 @@ function App() {
           <Services />
           <Process />
           <Contact />
+          <ButtonWhatsapp/>
         </main>
 
         <Footer />

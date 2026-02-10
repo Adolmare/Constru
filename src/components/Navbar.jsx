@@ -11,25 +11,38 @@ const Navbar = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <nav className="fixed w-full bg-primary z-50 shadow-lg transition-all duration-300">
+    <nav className="fixed w-full z-50 bg-white shadow-md py-2">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
+          
+          {/* Logo y Texto - Identidad Corporativa */}
           <Link to="inicio" smooth={true} className="flex-shrink-0 flex items-center gap-3 cursor-pointer">
-            <img src={logo} alt="Construenergy Logo" className="h-10 w-auto md:h-12" />
-            <span className="text-white font-bold text-lg md:text-xl tracking-wider hidden sm:block">
-              CONSTRUENERGY
-            </span>
+            <img src={logo} alt="Construenergy Logo" className="h-10 w-auto md:h-14" />
+            
+            <div className="flex flex-col leading-tight">
+              <span className="font-bold text-sm md:text-xl tracking-wider text-blue-900">
+                CONSTRUENERGY
+              </span>
+              <span className="font-semibold text-xs md:text-lg uppercase text-blue-800">
+                Ingenierías S.A.S
+              </span>
+              {/* Texto actualizado según tu solicitud */}
+              <span className="font-medium text-[9px] md:text-xs tracking-tight text-blue-700">
+                Soluciones Integrales Empresariales
+              </span>
+            </div>
           </Link>
           
+          {/* Menú Desktop */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-baseline space-x-6">
               {menuItems.map((item) => (
                 <Link
                   key={item}
                   to={item.toLowerCase()}
                   smooth={true}
                   duration={500}
-                  className="text-gray-300 hover:text-white hover:border-b-2 border-secondary px-3 py-2 rounded-md text-sm font-medium cursor-pointer transition-all"
+                  className="px-3 py-2 text-sm font-bold text-blue-900 hover:text-red-600 transition-all cursor-pointer"
                 >
                   {item}
                 </Link>
@@ -37,24 +50,30 @@ const Navbar = () => {
             </div>
           </div>
 
+          {/* Botón Hamburguesa Móvil */}
           <div className="md:hidden">
-            <button onClick={toggleMenu} className="text-gray-300 hover:text-white p-2">
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            <button 
+              onClick={toggleMenu} 
+              className="p-2 text-blue-900 hover:text-red-600 transition-colors"
+            >
+              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
         </div>
       </div>
 
+      {/* Menú Desplegable Móvil */}
       {isMenuOpen && (
-        <div className="md:hidden bg-primary pb-4">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div className="md:hidden bg-white border-t border-gray-100 shadow-lg animate-in slide-in-from-top duration-300">
+          <div className="px-4 pt-2 pb-6 space-y-1">
             {menuItems.map((item) => (
               <Link
                 key={item}
                 to={item.toLowerCase()}
                 smooth={true}
+                offset={-70}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium cursor-pointer"
+                className="text-blue-900 hover:bg-gray-50 hover:text-red-600 block px-3 py-4 rounded-md text-base font-bold border-b border-gray-50"
               >
                 {item}
               </Link>

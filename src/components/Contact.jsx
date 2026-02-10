@@ -8,10 +8,10 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // Reemplaza con tus IDs reales de EmailJS
-    const SERVICE_ID = 'TU_SERVICE_ID';
+    
+    const SERVICE_ID = 'construenergyingeneriasas@gmail.com|';
     const TEMPLATE_ID = 'TU_TEMPLATE_ID';
-    const PUBLIC_KEY = 'TU_PUBLIC_KEY';
+    const PUBLIC_KEY = 'tboq mogl paua mewe';
 
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
       .then((result) => {
@@ -24,10 +24,10 @@ const Contact = () => {
 
   return (
     <section id="contacto" className="py-20 bg-white">
-      {/* ... (encabezados e información de contacto) ... */}
+      
       
       <div className="bg-gray-50 p-8 rounded-xl shadow-lg">
-        {/* Agregamos la referencia 'ref' y el manejador 'onSubmit' */}
+        
         <form ref={form} onSubmit={sendEmail} className="space-y-6">
           <div>
             <label className="block text-sm font-medium text-gray-700">Nombre Completo</label>
