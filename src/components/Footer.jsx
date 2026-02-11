@@ -12,7 +12,7 @@ const Footer = () => {
         {/* Enlace de Descarga de Portafolio */}
         <div className="mb-8">
           <a 
-            href="/portafolio-construenergy.pdf" // Asegúrate de que el PDF esté en tu carpeta 'public'
+            href="https://drive.google.com/file/d/1UHvPE2o8OhrB_pqbZPNoGe2TpevRWvA6/view?usp=sharing" // Asegúrate de que el PDF esté en tu carpeta 'public'
             download
             className="inline-flex items-center gap-2 bg-white/5 hover:bg-primary hover:text-white border border-white/10 px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 group"
           >
@@ -24,7 +24,7 @@ const Footer = () => {
         {/* Contenedor de Iconos */}
         <div className="flex justify-center space-x-6 mb-8">
           <a 
-            href="https://facebook.com" 
+            href="https://www.facebook.com/share/1HRZTxdEyK/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="hover:text-blue-500 transition-colors duration-300"
