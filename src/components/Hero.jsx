@@ -6,13 +6,13 @@ const Hero = () => {
   return (
     <section
       id="inicio"
-      /* pt-24 asegura que el contenido baje para no chocar con el navbar fijo */
+   
       className="relative min-h-screen flex items-center justify-center bg-gray-900 pt-24 pb-20"
     >
       {/* Background Image */}
       <div className="absolute inset-0 overflow-hidden">
         <img
-          src="/hero.png"
+          src="/hero.webp"
           alt="Construcción Industrial"
           className="w-full h-full object-cover opacity-40"
         />
@@ -22,15 +22,15 @@ const Hero = () => {
       <div className="z-10 max-w-7xl mx-auto px-4 w-full">
         <div className="flex flex-col items-center text-center">
           
-          {/* Logo Container - Ajustado para bajarlo más */}
+          
           <motion.div 
-            initial={{ opacity: 0, y: -20 }} // Viene un poco de arriba hacia abajo
+            initial={{ opacity: 0, y: -20 }} 
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mt-10 mb-10 md:mt-16 md:mb-12" // He añadido margen superior para bajarlo
+            className="mt-10 mb-10 md:mt-16 md:mb-12" 
           >
             <img 
-              src="/logoconstru.png" 
+              src="/logoconstru.webp" 
               alt="logo" 
               className="w-40 sm:w-56 md:w-72 h-auto mx-auto drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)]" 
             />
